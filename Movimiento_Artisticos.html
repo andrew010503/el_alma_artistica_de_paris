@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimientos Artísticos</title>
+    <link rel="stylesheet" href="Style_Mov_Artitico.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="Search">
+                <img src="Images/Iconos/search_Icon.png" alt="buscar" class="search_Icon" onclick="togglesearch()">
+                <input type="text" id="search-bar" class="search-bar" placeholder="Buscar...">
+            </div>
+            <div class="navlinks">
+                <a href="Inicio.html" class="nav-link">Inicio</a>
+                <a href="#">Museos</a>
+                <a href="Movimiento_Artisticos.html" class="nav-link active">Movimientos Artísticos</a>
+                <a href="#">Artistas</a>
+                <a href="#">Eventos</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="taps">
+                <button id="login">Iniciar sesión</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>MOVIMIENTOS <br> ARTÍSTICOS</h1>
+            <div class="Scrolldown">
+                <img src="Images/Iconos/Arrow_Icons_Down.png" alt="Flecha hacia abajo para desplazarse" class="icon">
+            </div>
+        </section>
+
+        <section class="movimientos">
+            <h2>Manifestaciones Culturales del Momento</h2>
+            <div class="carousel">
+                <div class="tarjeta" style="background-image: url('Images/Movimientos_Artiticos/Surrealismo.jpg');" onclick="toggleExpand(this)">
+                    <p>SURREALISMO</p>
+                    <div class="detalle">El surrealismo es un movimiento artístico que explora el mundo de los sueños y el subconsciente...</div>
+                </div>
+                <div class="tarjeta" style="background-image: url('Images/Movimientos_Artiticos/Barroco.jpg');" onclick="toggleExpand(this)">
+                    <p>BARROCO</p>
+                    <div class="detalle">El Barroco fue un movimiento artístico del siglo XVII que destacó por su dramatismo y complejidad emocional...</div>
+                </div>
+                <div class="tarjeta" style="background-image: url('Images/Movimientos_Artiticos/Clasicismo.jpg');" onclick="toggleExpand(this)">
+                    <p>CLASICISMO</p>
+                    <div class="detalle">El Clasicismo fue un movimiento artístico que valoró la armonía, el equilibrio y la razón...</div>
+                </div>
+                <div class="tarjeta" style="background-image: url('Images/Movimientos_Artiticos/Abstractismo.jpg');" onclick="toggleExpand(this)">
+                    <p>ABSTRACTO</p>
+                    <div class="detalle">El Abstractismo se aleja de la representación figurativa y se enfoca en formas y colores para expresar emociones...</div>
+                </div>
+                <div class="tarjeta" style="background-image: url('Images/Movimientos_Artiticos/Expresionismo.png');" onclick="toggleExpand(this)">
+                    <p>EXPRESIONISMO</p>
+                    <div class="detalle">El expresionismo transmitía emociones intensas mediante la distorsión de la realidad...</div>
+                </div>
+                <div class="tarjeta" style="background-image: url('Images/Movimientos_Artiticos/Cubismo.jpg');" onclick="toggleExpand(this)">
+                    <p>CUBISMO</p>
+                    <div class="detalle">El cubismo descompuso objetos en formas geométricas y los mostró desde diferentes perspectivas...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleExpand(element) {
+            element.classList.toggle('expandida');
+        }
+    </script>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                <div class="column">
+                    <h3>ACERCA DEL MUSEO</h3>
+                    <p><a href="#">El Louvre en Francia y en el mundo</a></p>
+                    <p><a href="#">Reglamento de visita</a></p>
+                    <p><a href="#">Préstamos y depósitos</a></p>
+                </div>
+                <div class="column">
+                    <h3>SITIOS CONEXOS</h3>
+                    <p><a href="#">Taquilla</a></p>
+                    <p><a href="#">Tienda online</a></p>
+                    <p><a href="#">Colección</a></p>
+                    <p><a href="#">Corpus</a></p>
+                    <p><a href="#">Hacer una donación</a></p>
+                    <p><a href="#">Sala de prensa</a></p>
+                </div>
+                <div class="column">
+                    <h3>SOPORTE</h3>
+                    <p><a href="#">Preguntas frecuentes</a></p>
+                    <p><a href="#">Contacto</a></p>
+                    <p><a href="#">Empleo (en francés)</a></p>
+                    <p><a href="#">Privatización de espacios</a></p>
+                    <p><a href="#">¡Danos tu opinión!</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="social">
+                    <h4>¡SÍGUENOS!</h4>
+                    <div class="icons">
+                        <a href="#"><img src="Images/Redes_Sociales/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="Images/Redes_Sociales/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="Images/Redes_Sociales/x.png" alt="Twitter"></a>
+                        <a href="#"><img src="Images/Redes_Sociales/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="Images/Redes_Sociales/Pinterest.png" alt="Pinterest"></a>
+                        <a href="#"><img src="Images/Redes_Sociales/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Cookies</a>
+            <a href="#">Créditos (en francés)</a>
+            <a href="#">Créditos fotográficos</a>
+        </div>
+    </footer>
+</body>
+</html>

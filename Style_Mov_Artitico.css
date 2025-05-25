@@ -1,0 +1,407 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: black;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+.Search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 5;
+}
+
+.search_Icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    filter: invert(100%);
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search_Icon::before {
+    content: '🔍';
+    font-size: 20px;
+    color: black;
+}
+
+.search-bar {
+    display: none;
+    padding: 5px;
+    border: 1px solid white;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+
+.search-bar.show {
+    display: block;
+}
+
+.navlinks {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    font-size: 25px;
+}
+
+.navlinks a.active {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
+.navlinks a:hover,
+.navlinks a:focus {
+    background: #444;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.taps {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    width: auto;
+    padding-right: 50px;
+}
+
+.taps button {
+    padding: 10px 20px;
+    font-size: 30px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.taps button:hover,
+.taps button:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hero {
+    background: url(Images/Movimientos_Artiticos/Heros_Section.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0%;
+}
+
+.hero h1 {
+    font-size: 200px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px black;
+}
+
+.Scrolldown {
+    font-size: 2rem;
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+    will-change: transform;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.644);
+    margin-bottom: 40px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.tarjeta {
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta.expandida {
+    height: 400px;
+}
+
+.tarjeta p {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(241, 241, 241, 0.747);
+    font-size: 80px;
+    font-family: verdana;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.detalle {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(0, 0, 0, 0.568);
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(170, 170, 170);
+    font-size: 22px;
+}
+
+.tarjeta.expandida .detalle {
+    display: block;
+}
+
+footer {
+    background-color: #181818;
+    color: white;
+    padding: 100px 60px 60px;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 300px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    max-width: 1400px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    display: flex;
+    gap: 80px;
+    flex: 2;
+    flex-wrap: wrap;
+}
+
+.footer-left .column h3 {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.footer-left .column p {
+    margin: 12px 0;
+    color: white;
+}
+
+.footer-left .column p a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-left .column p a:hover {
+    color: #f3f3f3;
+}
+
+.footer-right {
+    border-left: 2px solid #fff;
+    padding-left: 50px;
+    flex: 1;
+    min-width: 320px;
+}
+
+.footer-right h4 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.social .icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.social .icons a img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 6px;
+    background-color: white;
+}
+
+.friends img {
+    max-width: 200px;
+    margin: 15px 0;
+}
+
+.friends p a {
+    color: white;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+hr {
+    margin: 60px auto 30px;
+    border: none;
+    height: 1px;
+    background-color: #ffffff;
+    max-width: 90%;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .navlinks {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .Scrolldown {
+        font-size: 1.5rem;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-left, .footer-right {
+        flex: 1;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer-bottom {
+        font-size: 18px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        height: 150px;
+    }
+
+    .tarjeta p {
+        font-size: 20px;
+    }
+
+    .search-bar {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .search_Icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+
+    .taps button {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
